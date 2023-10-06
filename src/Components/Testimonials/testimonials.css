@@ -1,0 +1,183 @@
+:root {
+  --PrimaryColor: hsl(353 , 100%, 65%);
+  --SecondaryColor: hsla(353, 100%, 65%, 0.547);
+  --BackgroundColor: #2a292925;
+  --titleColor: hsl(244, 24%, 26%);
+  --textColor: hsl(244, 16%, 43%);
+  --WhiteColor: #fff;
+  --BlackColor: #000;
+  --LinearColor: linear-gradient(to right, #fff, #000);
+  --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+}
+
+.testimonials .weather__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 700px;
+  gap: 1rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: darkblue;
+}
+.testimonials .weather__container .weather__title {
+  font-size: 1.3rem;
+  color: var(--WhiteColor);
+}
+.testimonials .weather__container .weather__topbar {
+  margin-top: 1rem;
+  position: relative;
+}
+.testimonials .weather__container .weather__topbar .inputCity {
+  padding: 20px 50px;
+  height: 40px;
+  border: 2px solid #0B2447;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+.testimonials .weather__container .weather__topbar .inputCity:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+.testimonials .weather__container .weather__topbar .label {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 1rem;
+  color: var(--WhiteColor);
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: 1;
+}
+.testimonials .weather__container .weather__topbar .label__icon {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 1.5rem;
+}
+.testimonials .weather__container .weather__topbar .topline {
+  position: absolute;
+  content: "";
+  background-color: var(--WhiteColor);
+  width: 0%;
+  height: 1.5px;
+  left: 10px;
+  bottom: -3px;
+  transition: all 0.5s;
+}
+.testimonials .weather__container .weather__topbar input[type=text]:focus ~ .topline {
+  width: 92%;
+  transition: all 0.5s;
+}
+.testimonials .weather__container .weather__topbar .underline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+.testimonials .weather__container .weather__topbar input[type=text]:focus ~ .label {
+  top: -22px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.testimonials .weather__container .weather__temp {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 40px;
+  color: var(--WhiteColor);
+}
+.testimonials .weather__container .weather__location {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--WhiteColor);
+}
+.testimonials .weather__container .weather__data {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 6rem;
+}
+.testimonials .weather__container .weather__data .data__element {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.testimonials .weather__container .weather__data .data__element .data {
+  color: var(--WhiteColor);
+}
+.testimonials .testimonials__container {
+  max-width: 700px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+.testimonials .testimonials__container .testimonials__item {
+  background-color: var(--WhiteColor);
+  color: var(--BlackColor);
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  padding: 0 1.5rem 1.5rem;
+}
+.testimonials .testimonials__container .testimonials__item .thumb {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.testimonials .testimonials__container .testimonials__item .thumb .imgDiv {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--PrimaryColor);
+}
+.testimonials .testimonials__container .testimonials__item .thumb .imgDiv img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonials .testimonials__container .testimonials__item .thumb .subtitle {
+  opacity: 0.7;
+}
+.testimonials .testimonials__container .testimonials__item .thumb .comment {
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.testimonials .testimonials__container .testimonials__item .thumb .comment:hover {
+  color: var(--WhiteColor);
+  background-color: var(--SecondaryColor);
+}
+.testimonials .testimonials__container .swiper-pagination-bullet {
+  width: 0.5rem !important;
+  height: 0.375rem !important;
+  background-color: var(--PrimaryColor);
+}
+.testimonials .testimonials__container .swiper-pagination-bullet-active {
+  width: 1rem !important;
+  height: 0.375rem !important;
+  border-radius: 0.5rem !important;
+}
+/*# sourceMappingURL=testimonials.css.map */

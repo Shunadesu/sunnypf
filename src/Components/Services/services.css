@@ -1,0 +1,83 @@
+:root {
+  --PrimaryColor: hsl(353 , 100%, 65%);
+  --SecondaryColor: hsla(353, 100%, 65%, 0.547);
+  --BackgroundColor: #2a292925;
+  --titleColor: hsl(244, 24%, 26%);
+  --textColor: hsl(244, 16%, 43%);
+  --WhiteColor: #fff;
+  --BlackColor: #000;
+  --LinearColor: linear-gradient(to right, hsl(353 , 100%, 65%), hsla(353, 100%, 65%, 0.547));
+  --LinearDarkBlue: linear-gradient(to right, darkblue, #000);
+  --Linear1Color: linear-gradient(to bottom, hsl(353 , 100%, 65%), hsla(353, 100%, 65%, 0.547));
+  --Linear1DarkBlue: linear-gradient(to bottom, darkblue, #000);
+  --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+}
+
+.services .services__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: stretch;
+  gap: 2rem;
+}
+.services .services__container .data {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.services .services__container .data .imgDiv {
+  width: 120px;
+  height: 100%;
+}
+.services .services__container .data .imgDiv img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.services .services__container .data:hover {
+  transform: translateY(-10px);
+}
+.services .services__container #Developer {
+  background: var(--PrimaryColor);
+  color: #fff;
+}
+.services .services__container #Developer:hover {
+  background: darkblue;
+}
+.services .services__container #UI {
+  background: var(--LinearColor);
+  color: #fff;
+}
+.services .services__container #UI:hover {
+  background: var(--LinearDarkBlue);
+}
+.services .services__container #Coding {
+  background: var(--SecondaryColor);
+  color: #fff;
+}
+.services .services__container #Coding:hover {
+  background: var(--BlackColor);
+}
+@media screen and (max-width: 1000px) {
+  .services .services__container {
+    flex-direction: column;
+  }
+  .services .services__container #UI {
+    background: var(--Linear1Color);
+    color: #fff;
+  }
+  .services .services__container #UI:hover {
+    background: var(--Linear1DarkBlue);
+  }
+}
+/*# sourceMappingURL=services.css.map */

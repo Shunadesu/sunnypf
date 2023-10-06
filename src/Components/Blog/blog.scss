@@ -1,0 +1,85 @@
+:root{
+    --PrimaryColor: hsl(353 , 100%, 65%);
+    --SecondaryColor: hsla(353, 100%, 65%, 0.547);
+    --BackgroundColor: #2a292925;
+    --titleColor: hsl(244, 24%, 26%);
+    --textColor: hsl(244, 16%, 43%);
+    --WhiteColor: #fff;
+    --BlackColor: #000;
+    --LinearColor: linear-gradient(to right, #fff, #000);
+  
+  
+    --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+}
+
+.blog{
+    .blog__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .blog__card{
+            padding: 1rem;
+            box-shadow: var(--shadow);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--WhiteColor);
+            color: var(--BlackColor);
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            .blog__thumb{
+                position: relative;
+                .blog__category{
+                    position: absolute;
+                    top: 0;
+                    left: 1rem;
+                    padding: 0.25rem 2rem;
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    line-height: 20px;
+                    background: var(--SecondaryColor);
+                    border-bottom-left-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+                .blog__img{
+                    width: 350px;
+                    height: 200px;
+                    overflow: hidden;
+                    border-radius: 1rem;
+                    transition: all 0.3s ease;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    &:hover{
+                        transform: scale(1.07, 1.07);
+                    }
+                }
+            }
+        }
+        .blog__details{
+            .blog__title{
+                font-size: 1.3rem;
+                line-height: 30px;
+            }
+            .blog__meta{
+                .meta{
+                    opacity: 0.7;
+                }
+                .sunnymeta{
+                    color: var(--PrimaryColor);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px){
+        .blog__container{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

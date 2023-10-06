@@ -1,0 +1,80 @@
+:root{
+    --PrimaryColor: hsl(353 , 100%, 65%);
+    --SecondaryColor: hsla(353, 100%, 65%, 0.547);
+    --BackgroundColor: #2a29290c;
+    --titleColor: hsl(244, 24%, 26%);
+    --textColor: hsl(244, 16%, 43%);
+    --WhiteColor: #fff;
+    --BlackColor: #000;
+    --LinearColor: linear-gradient(to right, #fff, #000);
+  
+  
+    --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+  }
+
+.resume{
+    .resume__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .timeline{
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 2rem;
+            position: relative;
+            box-shadow: var(--shadow);
+            color: var(--BlackColor);
+            .timeline__item{
+                position: relative;
+                padding-left: 3rem;
+                padding-bottom: 2.2rem;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+                &::before{
+                    content: '';
+                    width: 1px;
+                    position: absolute;
+                    left: 0.5rem;
+                    height: 100%;
+                    background-color: var(--SecondaryColor);
+                }
+                .icon{
+                    .graduation,
+                    .experience{
+                        position: absolute;
+                        left: -0.6rem;
+                        top: 0;
+                        font-size: 2.2rem;
+                        color: var(--PrimaryColor);
+                        background-color: #fff;
+                        padding: 0.5rem 0;
+                    }
+                }
+                .timeline__date{
+                    color: #8b88b1;
+                    font-size: 1rem;
+                    opacity: 0.7;
+               }
+                .timeline__title{
+                    font-size: 1.3rem;
+                    margin: 0.5rem 0;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        color: var(--PrimaryColor);
+                        transform: translateX(5px);
+                    }
+                }
+                .timeline__text{
+                    font-size: 0.8rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+    @media screen and(max-width: 768px){
+        .resume__container{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

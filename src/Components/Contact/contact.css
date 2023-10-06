@@ -1,0 +1,163 @@
+:root {
+  --PrimaryColor: hsl(353 , 100%, 65%);
+  --SecondaryColor: hsla(353, 100%, 65%, 0.547);
+  --BackgroundColor: #2a292925;
+  --titleColor: hsl(244, 24%, 26%);
+  --textColor: hsl(244, 16%, 43%);
+  --WhiteColor: #fff;
+  --BlackColor: #000;
+  --LinearColor: linear-gradient(to right, #fff, #000);
+  --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+}
+
+.contact {
+  margin-top: 3rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  position: relative;
+}
+.contact .toast {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 1.2rem;
+  background-color: var(--SecondaryColor);
+  color: var(--WhiteColor);
+  transition: all linear 0.3s;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+@-webkit-keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+.contact .toast .toast__title {
+  font-size: 1rem;
+}
+.contact .toast .toast__icon {
+  font-size: 1rem;
+}
+.contact .toast .toast__close {
+  font-size: 1rem;
+}
+.contact .contact__container {
+  display: grid;
+  grid-template-columns: 5fr 8fr;
+  width: 100%;
+  gap: 2rem;
+}
+.contact .contact__container .contact__info {
+  margin-left: 1rem;
+}
+.contact .contact__container .contact__info .contact__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.contact .contact__container .contact__info .sunnyinfo {
+  margin-top: 1rem;
+  color: var(--BlackColor);
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+.contact .contact__container .contact__info .sunnyinfo .icon {
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+.contact .contact__container .contact__info .sunnyinfo:hover {
+  color: var(--PrimaryColor);
+}
+.contact .contact__container .contact__form .contact__form-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.contact .contact__container .contact__form .contact__form-group .contact__form-div {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 3.75rem;
+}
+.contact .contact__container .contact__form .contact__form-group .contact__form-div .contact__form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--shadow);
+  background-color: var(--WhiteColor);
+  color: var(--textColor);
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  z-index: 1;
+}
+.contact .contact__container .contact__form .contact__form-div {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 3.75rem;
+}
+.contact .contact__container .contact__form .contact__form-div .contact__form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--shadow);
+  background-color: var(--WhiteColor);
+  color: var(--textColor);
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  z-index: 1;
+}
+.contact .contact__container .contact__form .contact__form-div .contact__form-area {
+  height: 12rem;
+}
+.contact .contact__container .contact__form .contact__form-div .contact__form-area textarea {
+  resize: none;
+}
+.contact .contact__container .contact__form .btn {
+  margin-top: 8rem;
+  float: right;
+}
+@media screen and (max-width: 800px) {
+  .contact .contact__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
